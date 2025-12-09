@@ -153,5 +153,3 @@ export const getMovie = (args) => {
       throw error
    });
   };
-
-  //testing if submodule is fixed
