@@ -1,4 +1,4 @@
-import.meta.env.VITE_TMDB_KEY
+
 
 export const getMovies = () => {
   return fetch(
