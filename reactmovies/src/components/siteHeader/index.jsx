@@ -31,6 +31,8 @@ const SiteHeader = () => {
     { label: "Trending", path: "/movies/trending" },
     { label: "Rated", path: "/movies/rated" },
     { label: "Upcoming", path: "/movies/upcoming" },
+    { label: "Sign Up", path: "/signup" },
+    { label: "Login", path: "/login" },
   ];
 
   // Function to handle menu item selection

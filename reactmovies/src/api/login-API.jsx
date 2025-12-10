@@ -1,13 +1,13 @@
-export const getTasks = async () => {
+export const getUsers = async () => {
     const  res = await fetch(
-        `http://localhost:8080/api/tasks`
+        `http://localhost:8080/api/users`
     )
         return res.json();
 };
 
-export const addTask = async(data) => {
+export const addUser = async(data) => {
     const res = await fetch(
-        `http://localhost:8080/api/tasks`,
+        `http://localhost:8080/api/users?action=register`,
         {
             method: 'POST',
             headers: {
@@ -19,9 +19,23 @@ export const addTask = async(data) => {
         return res.json();
 };
 
-export const deleteTask = async (id) => {
+export const loginUser = async(data) => {
+    const res = await fetch(
+        `http://localhost:8080/api/users`,
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        }
+    )
+        return res.json();
+};
+
+export const deleteUser = async (id) => {
     const res =  fetch(
-        `http://localhost:8080/api/tasks/${id}`,
+        `http://localhost:8080/api/users/${id}`,
         {
             method: 'DELETE'
         }
@@ -31,7 +45,7 @@ export const deleteTask = async (id) => {
 
 export const updateTask = async (data) => {
     const res = await fetch(
-        `http://localhost:8080/api/tasks/${data._id}`,
+        `http://localhost:8080/api/users/${data._id}`,
         {
             method: 'PUT',
             headers: {
