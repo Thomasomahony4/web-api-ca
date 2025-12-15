@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Navigate, Routes } from "react-router"; // Routin
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'; // React Query for data fetching
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'; // Devtools for React Query
 import HomePage from "./pages/homePage"; // Home page component
+import Login from "./pages/loginSignup"; // Home page component
 import MoviePage from "./pages/movieDetailsPage"; // Movie details page
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage"; // Favorites page
 import TrendingPage from "./pages/trendingPage"; // Trending movies page
@@ -47,6 +48,7 @@ const App = () => {
             <Route path="/movies/:id" element={<MoviePage />} />
             <Route path="/movies/:id/credits" element={<MovieCreditsPage />} />
             <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<Login />} />
             {/* Catch-all route: redirect unknown URLs to home */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
